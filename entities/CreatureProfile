@@ -1,0 +1,30 @@
+{
+  "name": "CreatureProfile",
+  "type": "object",
+  "properties": {
+    "name": {"type": "string"},
+    "creature_type": {"type": "string", "enum": ["npc", "enemy", "creature", "other"], "default": "creature"},
+    "summary": {"type": "string"},
+    "challenge_rating": {"type": ["number", "string"]},
+    "size": {"type": "string"},
+    "type": {"type": "string"},
+    "alignment": {"type": "string"},
+    "languages": {"type": "string"},
+    "traits": {"type": "array", "items": {"type": "object"}},
+    "actions": {"type": "array", "items": {"type": "object"}},
+    "reactions": {"type": "array", "items": {"type": "object"}},
+    "legendary_actions": {"type": "array", "items": {"type": "object"}},
+    "hp_dice_count": {"type": "number", "default": 1},
+    "hp_dice_sides": {"type": "number", "default": 8},
+    "hp_bonus": {"type": "number", "default": 0},
+    "hp_formula": {"type": "string"},
+    "hp_average": {"type": "number"},
+    "ac": {"type": "number"},
+    "speed": {"type": "number"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "visibility": {"type": "string", "enum": ["public", "group", "private"], "default": "public"},
+    "notes": {"type": "string"},
+    "created_by_user_id": {"type": "string"},
+    "group_ids": {"type": "array", "items": {"type": "string"}}
+  }
+}

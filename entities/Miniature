@@ -1,0 +1,22 @@
+{
+  "name": "Miniature",
+  "type": "object",
+  "properties": {
+    "group_id": {"type": "string"},
+    "source_type": {"type": "string", "enum": ["character", "creature", "npc", "enemy", "other"], "default": "character"},
+    "source_id": {"type": "string"},
+    "name": {"type": "string"},
+    "summary": {"type": "string"},
+    "conditions": {"type": "array", "items": {"type": "string"}},
+    "status_effects": {"type": "array", "items": {"type": "string"}},
+    "show_health_bar": {"type": "boolean", "default": true},
+    "hp_current": {"type": "number"},
+    "hp_max": {"type": "number"},
+    "x": {"type": "number", "default": 20},
+    "y": {"type": "number", "default": 20},
+    "created_by_user_id": {"type": "string"},
+    "is_visible": {"type": "boolean", "default": true},
+    "notes": {"type": "string"},
+    "tags": {"type": "array", "items": {"type": "string"}}
+  }
+}
