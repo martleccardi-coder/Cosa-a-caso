@@ -1,0 +1,53 @@
+{
+  "name": "GroupMaterial",
+  "type": "object",
+  "properties": {
+    "group_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "map",
+        "npc_sheet",
+        "music",
+        "main_quest",
+        "side_quest",
+        "task",
+        "other"
+      ],
+      "default": "other"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "group",
+        "private",
+        "public"
+      ],
+      "default": "group"
+    },
+    "uploaded_by_user_id": {
+      "type": "string"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,210 @@
+{
+  "name": "DndItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Race",
+        "Subrace",
+        "Class",
+        "Subclass",
+        "Background",
+        "Feat",
+        "Spell",
+        "Weapon",
+        "Armor",
+        "Adventuring Gear",
+        "Tool",
+        "Mount & Vehicle",
+        "Magic Item",
+        "Language",
+        "Skill",
+        "Condition",
+        "Sense",
+        "Currency"
+      ]
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "PHB",
+        "XGE",
+        "TCE",
+        "MToF",
+        "VGM",
+        "DMG",
+        "SCAG",
+        "GGR",
+        "EGW",
+        "FToD",
+        "SJA",
+        "Custom"
+      ],
+      "default": "PHB"
+    },
+    "source_title": {
+      "type": "string"
+    },
+    "source_page_start": {
+      "type": "number"
+    },
+    "source_page_end": {
+      "type": "number"
+    },
+    "source_excerpt": {
+      "type": "string"
+    },
+    "created_from_file_name": {
+      "type": "string"
+    },
+    "import_method": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "pdf_import",
+        "ai_generated",
+        "copied"
+      ],
+      "default": "manual"
+    },
+    "approval_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "draft"
+    },
+    "visibility": {
+      "type": "string",
+      "enum": [
+        "public",
+        "private",
+        "group"
+      ],
+      "default": "private"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "short_description": {
+      "type": "string"
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "sub_items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "parent_item_id": {
+      "type": "string"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "spell_level": {
+      "type": "number"
+    },
+    "spell_school": {
+      "type": "string"
+    },
+    "casting_time": {
+      "type": "string"
+    },
+    "range_imperial": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "components": {
+      "type": "string"
+    },
+    "damage_dice": {
+      "type": "string"
+    },
+    "damage_type": {
+      "type": "string"
+    },
+    "weight_lbs": {
+      "type": "number"
+    },
+    "cost_gp": {
+      "type": "number"
+    },
+    "rarity": {
+      "type": "string",
+      "enum": [
+        "common",
+        "uncommon",
+        "rare",
+        "very rare",
+        "legendary",
+        "artifact"
+      ]
+    },
+    "requires_attunement": {
+      "type": "boolean"
+    },
+    "armor_class": {
+      "type": "number"
+    },
+    "armor_type": {
+      "type": "string",
+      "enum": [
+        "light",
+        "medium",
+        "heavy",
+        "shield",
+        ""
+      ]
+    },
+    "stealth_disadvantage": {
+      "type": "boolean"
+    },
+    "str_requirement": {
+      "type": "number"
+    },
+    "hit_die": {
+      "type": "string"
+    },
+    "class_spell_list": {
+      "type": "string"
+    },
+    "available_classes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "name",
+    "category"
+  ]
+}

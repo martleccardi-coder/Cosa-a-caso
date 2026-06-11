@@ -1,0 +1,52 @@
+{
+  "name": "GroupMembership",
+  "type": "object",
+  "properties": {
+    "group_id": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "display_name": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "master",
+        "player"
+      ],
+      "default": "player"
+    },
+    "party_role": {
+      "type": "string",
+      "enum": [
+        "tank",
+        "healer",
+        "damage",
+        "support",
+        "leader",
+        "scout",
+        "controller",
+        "none"
+      ],
+      "default": "none"
+    },
+    "permission_level": {
+      "type": "string",
+      "enum": [
+        "master",
+        "co_gm",
+        "assistant",
+        "player",
+        "observer"
+      ],
+      "default": "player"
+    },
+    "selected_character_sheet_id": {
+      "type": "string"
+    }
+  },
+  "required": []
+}

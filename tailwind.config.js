@@ -43,18 +43,6 @@ module.exports = {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',
   			ring: 'hsl(var(--ring))',
-  			parchment: {
-  				light: '#F2E6C9',
-  				mid: '#E8D5A3',
-  				dark: '#C8A96E',
-  				deep: '#B8922A',
-  			},
-  			ink: {
-  				dark: '#1C1007',
-  				mid: '#3D2B1F',
-  				red: '#8B1A1A',
-  				gold: '#7A5C1E',
-  			},
   			chart: {
   				'1': 'hsl(var(--chart-1))',
   				'2': 'hsl(var(--chart-2))',
@@ -74,19 +62,27 @@ module.exports = {
   			}
   		},
   		fontFamily: {
-  			heading: ['var(--font-heading)', 'Georgia', 'serif'],
-  			body: ['var(--font-body)', 'Georgia', 'serif'],
-  			display: ['var(--font-display)', 'Georgia', 'serif'],
+  			heading: ['var(--font-heading)'],
+  			body: ['var(--font-body)'],
+  			display: ['var(--font-display)'],
   			mono: ['var(--font-mono)']
   		},
   		keyframes: {
   			'accordion-down': {
-  				from: { height: '0' },
-  				to: { height: 'var(--radix-accordion-content-height)' }
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
   			},
   			'accordion-up': {
-  				from: { height: 'var(--radix-accordion-content-height)' },
-  				to: { height: '0' }
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
   			}
   		},
   		animation: {
